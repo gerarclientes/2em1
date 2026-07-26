@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Hedvig Letters Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/hedvig-letters-serif-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/nunito-sans-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/nunito-sans-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/nunito-sans-latin-700.woff2") format("woff2");
+}
+
 :root {
   --font-editorial: "Hedvig Letters Serif", Georgia, serif;
   --font-interface: "Nunito Sans", Arial, sans-serif;
@@ -480,6 +512,11 @@ a {
 
   .hero-mockup {
     bottom: 0;
+  }
+
+  /* Keep the note clear of the arch while preserving the visual composition. */
+  .hero-note {
+    bottom: 118px;
   }
 }
 
@@ -2584,6 +2621,11 @@ footer {
     width: min(360px, 100%);
   }
 
+  /* On phones, let the journey card sit below the product instead of covering it. */
+  .floating-card {
+    bottom: -42px;
+  }
+
   .receive .split-heading {
     margin-bottom: 104px;
   }
@@ -2975,7 +3017,7 @@ footer {
 
   .floating-card {
     right: 0;
-    bottom: 25px;
+    bottom: -42px;
     width: 185px;
   }
 

@@ -1,9 +1,4 @@
 import type { Metadata } from "next";
-import "@fontsource/hedvig-letters-serif/400.css";
-import "@fontsource/nunito-sans/400.css";
-import "@fontsource/nunito-sans/500.css";
-import "@fontsource/nunito-sans/600.css";
-import "@fontsource/nunito-sans/700.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -77,6 +72,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/hero-couple-reading.webp"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/fonts/hedvig-letters-serif-latin-400.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/nunito-sans-latin-400.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

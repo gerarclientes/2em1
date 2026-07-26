@@ -221,7 +221,15 @@ const benefitMockupAssets: Record<string, string> = {
 };
 
 function BenefitMockup({ type }: { type: string }) {
-  return <img className="benefit-mockup-image" src={benefitMockupAssets[type]} alt="" />;
+  return (
+    <img
+      className="benefit-mockup-image"
+      src={benefitMockupAssets[type]}
+      alt=""
+      loading="lazy"
+      decoding="async"
+    />
+  );
 }
 
 function BenefitIcon({ type }: { type: string }) {
@@ -240,7 +248,13 @@ function BenefitIcon({ type }: { type: string }) {
 function LogoMark() {
   return (
     <div className="brand" aria-label="Dois em Um">
-      <img src="/assets/logo-dois-em-um-horizontal.svg" alt="Dois em Um" />
+      <img
+        src="/assets/logo-dois-em-um-horizontal.svg"
+        alt="Dois em Um"
+        width={1193}
+        height={275}
+        decoding="async"
+      />
     </div>
   );
 }
@@ -336,14 +350,22 @@ export default function Home() {
           <div className="hero-visual">
             <div className="arch-photo">
               <img
-                src="/assets/hero-couple-reading.png"
+                src="/assets/hero-couple-reading.webp"
                 alt="Casal compartilhando um momento de fé e conexão"
+                width={427}
+                height={711}
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <div className="hero-mockup">
               <img
-                src="/assets/hero-mockup-dois-em-um.png"
+                src="/assets/hero-mockup-dois-em-um.webp"
                 alt="Devocional Dois em Um em livro e celular"
+                width={392}
+                height={437}
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <div className="hero-note">
@@ -385,7 +407,7 @@ export default function Home() {
                 style={{ "--delay": `${index * 80}ms` } as React.CSSProperties}
                 key={item.text}
               >
-                <img src={item.image} alt={item.alt} />
+                <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
                 <div className="pain-card-shade" />
                 <span className="pain-number">0{index + 1}</span>
                 <div className="pain-card-content">
@@ -406,8 +428,12 @@ export default function Home() {
             <div className="product-blob" />
             <img
               className="product-mockup"
-              src="/assets/product-mockup-dois-em-um.png"
+              src="/assets/product-mockup-dois-em-um.webp"
               alt="Conteúdos do devocional Dois em Um"
+              width={431}
+              height={791}
+              loading="lazy"
+              decoding="async"
             />
             <div className="floating-card">
               <span>Jornada guiada</span>
@@ -509,8 +535,12 @@ export default function Home() {
         <div className="container transformation-grid">
           <div className="transformation-photo" data-reveal>
             <img
-              src="/assets/transformation-couple-guided.png"
+              src="/assets/transformation-couple-guided.webp"
               alt="Casal vivendo um momento intencional juntos"
+              width={427}
+              height={711}
+              loading="lazy"
+              decoding="async"
             />
             <div className="photo-caption">
               <span>30 dias</span>
@@ -565,7 +595,14 @@ export default function Home() {
       </section>
 
       <div className="testimonial-offer-transition" aria-hidden="true">
-        <img src="/assets/offer-transition.png" alt="" />
+        <img
+          src="/assets/offer-transition.webp"
+          alt=""
+          width={699}
+          height={384}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
 
       <section className="section offer-section" id="oferta">
@@ -617,7 +654,14 @@ export default function Home() {
       <section className="section guarantee">
         <div className="container guarantee-card" data-reveal>
           <div className="seal">
-            <img src="/assets/guarantee-seal.png" alt="Selo de garantia de 7 dias" />
+            <img
+              src="/assets/guarantee-seal.webp"
+              alt="Selo de garantia de 7 dias"
+              width={220}
+              height={223}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div>
             <p className="eyebrow">
@@ -723,8 +767,12 @@ export default function Home() {
           <div className="final-visual" data-reveal>
             <img
               className="final-mockup"
-              src="/assets/final-mockup-dois-em-um.png"
+              src="/assets/final-mockup-dois-em-um.webp"
               alt="Devocional digital Dois em Um"
+              width={380}
+              height={682}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
